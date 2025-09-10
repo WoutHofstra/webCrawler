@@ -1,5 +1,5 @@
 # webCrawler
 
 
-A simple web crawler, made to learn the basics of web crawlers
+A simple web crawler, made to learn the basics of web crawlers  
 Wish me luck!
