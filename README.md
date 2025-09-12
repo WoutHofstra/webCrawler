@@ -10,7 +10,7 @@ Features
 
 🌐 Crawl a website: Starts from a base URL and recursively crawls internal links.  
 🔗 Track links: Keeps track of how many times each URL has been discovered.  
-🖼E Extract images: Collects image URLs from each page.  
+🖼 Extract images: Collects image URLs from each page.  
 ⚡ Concurrent crawling: Uses goroutines to crawl multiple pages at once.  
 🔒 Thread-safe storage: Shared state is protected with a sync.Mutex.  
 ⏳ Concurrency control: Limits the number of simultaneous HTTP requests using a buffered channel.  
