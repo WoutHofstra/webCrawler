@@ -4,10 +4,17 @@ import (
 	"fmt"
 	"net/url"
 	"strings"
+	"os"
 )
 
 func (cfg *config) crawlPage(rawCurrentURL string) {
 	defer cfg.wg.Done()
+
+        cfg.mu.Lock()
+	if cfg.maxPages <= len(cfg.pages) {
+		os.Exit(0)
+	}
+        cfg.mu.Unlock()
 
 	cfg.concurrencyControl <- struct{}{}
 	defer func() { <-cfg.concurrencyControl }()
